@@ -1,8 +1,37 @@
 {
-  "name": "jsonpath",
+  "name": "@bradhowes/jsonpath",
+  "version": "1.3.1",
   "description": "Query JavaScript objects with JSONPath expressions. Robust / safe JSONPath engine for Node.js.",
-  "version": "1.3.0",
+  "keywords": [
+    "JSONPath",
+    "jsonpath",
+    "json-path",
+    "object",
+    "traversal",
+    "json",
+    "path",
+    "data structures"
+  ],
+  "homepage": "https://github.com/dchester/jsonpath#readme",
+  "bugs": {
+    "url": "https://github.com/dchester/jsonpath/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bradhowes/jsonpath.git"
+  },
+  "license": "MIT",
   "author": "david@fmail.co.uk",
+  "type": "commonjs",
+  "main": "index.js",
+  "browser": "./jsonpath.js",
+  "bin": {
+    "jsonpath": "bin/generate_parser.js"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
   "scripts": {
     "prepublishOnly": "node lib/aesprim.js > generated/aesprim-browser.js",
     "test": "mocha -u tdd test && jshint lib",
@@ -12,10 +41,6 @@
     "esprima": "1.2.5",
     "static-eval": "2.1.1",
     "underscore": "^1.13.8"
-  },
-  "browser": "./jsonpath.js",
-  "alias": {
-    "./lib/aesprim.js": "./generated/aesprim-browser.js"
   },
   "devDependencies": {
     "grunt": "0.4.5",
@@ -27,19 +52,7 @@
     "jshint": "2.6.0",
     "mocha": "2.1.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/dchester/jsonpath"
-  },
-  "keywords": [
-    "JSONPath",
-    "jsonpath",
-    "json-path",
-    "object",
-    "traversal",
-    "json",
-    "path",
-    "data structures"
-  ],
-  "license": "MIT"
+  "alias": {
+    "./lib/aesprim.js": "./generated/aesprim-browser.js"
+  }
 }
